@@ -2,6 +2,18 @@ import OutputScreen from './outputScreen.js';
 import Button from './Button.js';
 import React from 'react';
 
+constructor() {
+  super();
+
+  //default state
+  this.state = {
+    request: '',
+    answer:''
+  }
+
+  this.handleClick = this.handleClick.bind(this);
+}
+
 class Calculator extends React.Component {
   render() {
     return (
@@ -41,5 +53,7 @@ class Calculator extends React.Component {
     );
   }
 }
+
+
 
 export default Calculator;
