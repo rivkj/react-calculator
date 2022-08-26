@@ -1,11 +1,20 @@
 import React from 'react';
 
+const getSignName = btn => {
+  const className = {
+    '=': 'equals',
+    'x': 'sign',
+    '-': 'sign',
+    '+': 'sign',
+    '/': 'sign',
+  }
+  return className[btn];
+}
+
 //button component as a functional component
-const Button = (props) => {
+const Button = ({value}) => {
   return (
-    <input type="button" 
-      value={props.label} 
-    />
+    <button className={`${getSignName(value)} button`}>{value}</button>
   );
 }
 

@@ -1,57 +1,34 @@
-import OutputScreen from './outputScreen.js';
-import Button from './Button.js';
+import OutputScreen from './outputScreen';
+import ButtonBox from './ButtonBox';
+import Button from './Button'
 import React from 'react';
+import Wrapper from "./Wrapper";
 
-constructor() {
-  super();
+const btnValues = [
+  ['C', '+-', '%', '/'],
+  [7, 8, 9, 'x'],
+  [4, 5, 6, '-'],
+  [1, 2, 3, '+'],
+  [0, '.', '='],
+];
 
-  //default state
-  this.state = {
-    request: '',
-    answer:''
-  }
-
-  this.handleClick = this.handleClick.bind(this);
-}
-
-class Calculator extends React.Component {
-  render() {
-    return (
-      <div className="frame">
-        <div class="mainCalc">
-          <OutputScreen />
-          <div className="button-row">
-            <Button label={'Clear'}/>
-            <Button label={'Delete'}/>
-            <Button label={'.'}/>
-            <Button label={'/'}/>
-          </div>
-          <div className="button-row">
-            <Button label={'7'}/>
-            <Button label={'8'}/>
-            <Button label={'9'}/>
-            <Button label={'*'}/>
-          </div>
-          <div className="button-row">
-            <Button label={'4'}/>
-            <Button label={'5'}/>
-            <Button label={'6'}/>
-            <Button label={'-'}/>
-          </div>
-          <div className="button-row">
-            <Button label={'1'}/>
-            <Button label={'2'}/>
-            <Button label={'3'}/>
-            <Button label={'+'}/>
-          </div>
-          <div className="button-row">
-            <Button label={'0'} />
-            <Button label={'='} />
-          </div>
-        </div>
-      </div>
-    );
-  }
+function Calculator () {
+  return (
+    <div>
+      <h1>My Calculator App</h1>
+      <Wrapper>
+        <OutputScreen />
+        <ButtonBox>
+          {btnValues.flat().map((btn, i) => (
+            <Button 
+            value ={btn}
+            key={i}
+            />
+          ))}
+        </ButtonBox>
+      </Wrapper>
+    </div>
+  )
 }
 
 
