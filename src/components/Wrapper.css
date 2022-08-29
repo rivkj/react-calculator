@@ -11,8 +11,8 @@ body {
   background-image: linear-gradient(315deg, #eb08be 0%, #FFC2F4 74%);
   border-radius: 1rem; 
   box-shadow: 0px 9px 15px -3px #0000001a;
-  padding: 2rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 18rem;
 }
 
 h1 {
@@ -20,21 +20,28 @@ h1 {
   text-align: center;
 }
 
+/** Output screen styling **/
 .screen {
+  align-items: flex-end;
   background-color: rgba(90, 86, 86, 0.75);
-  height: 5rem;
-  margin-bottom: 2rem;
-  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  margin: 1rem 0;
+  padding-right: 1rem;
 }
 
-.buttonBox {
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin: .5rem;
+.result {
+  flex: 1;
+  font-size: 24px;
 }
 
-.button {
+.text {
+  flex: 1;
+  font-size: 18px;
+}
+
+.button-wrapper {
   align-items: center;
   background: #b8eec2;
   border: none;
@@ -42,21 +49,18 @@ h1 {
   cursor: pointer;
   display: flex;
   font-size: 1.5rem;
+  flex: 1;
   height: 3rems;
   justify-content: center;
-  padding: 1rem;
+  margin: 5px;
+  padding: 1em;
 }
 
-.button:hover {
+.button-wrapper:hover {
   background: #1d291f;
   color: #fff;
 }
 
-.equals {
-  background: #14922d;
-  grid-column: 3/5;
-}
-
-.sign {
-  background: #fff;
+.row {
+  display: flex;
 }

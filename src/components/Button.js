@@ -1,20 +1,15 @@
 import React from 'react';
-
-const getSignName = btn => {
-  const className = {
-    '=': 'equals',
-    'x': 'sign',
-    '-': 'sign',
-    '+': 'sign',
-    '/': 'sign',
-  }
-  return className[btn];
-}
+import "./Wrapper.css";
 
 //button component as a functional component
-const Button = ({value}) => {
+const Button = ({ symbol, color, handleClick }) => {
   return (
-    <button className={`${getSignName(value)} button`}>{value}</button>
+    <div 
+    onClick={() => handleClick(symbol)}
+    className="button-wrapper" 
+    style={{ backgroundColor: color }}>
+      {symbol}
+    </div>
   );
 }
 

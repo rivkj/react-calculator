@@ -1,37 +1,68 @@
-import OutputScreen from './outputScreen';
-import ButtonBox from './ButtonBox';
-import Button from './Button'
-import React from 'react';
+import React from "react";
+import {useState} from "react";
+
+import * as Math from "mathjs";
+
+import Button from "./Button";
+import OutputScreen from "./outputScreen";
 import Wrapper from "./Wrapper";
-import CalProvider from '../context/CalContext';
 
-const btnValues = [
-  ['C', '+-', '%', '/'],
-  [7, 8, 9, 'x'],
-  [4, 5, 6, '-'],
-  [1, 2, 3, '+'],
-  [0, '.', '='],
-];
+const Calculator = () => {
 
-function Calculator () {
+  const [text, setText] = useState("");
+  const [result, setResult] = useState("");
+
+  const addToText =(val) => {
+    setText((text) => [...text, val + " "])
+  };
+
+  const resetInput = () => {
+    setText("");
+    setResult("");
+  };
+
+  const calculateResult = () => {
+    const input = text.join("");
+
+    setResult(Math.evaluate(input));
+  };
+
+  const buttonColor = "#6dd280";
+  const buttonColor2 = "#207e31";
+
   return (
-    <CalProvider>
+    <div className="Calc">
       <h1>My Calculator App</h1>
       <Wrapper>
-        <OutputScreen />
-        <ButtonBox>
-          {btnValues.flat().map((btn, i) => (
-            <Button 
-            value ={btn}
-            key={i}
-            />
-          ))}
-        </ButtonBox>
+        <OutputScreen text={text} result={result} />
+        <div className="row">
+          <Button symbol="7" handleClick={addToText} />
+          <Button symbol="8" handleClick={addToText} />
+          <Button symbol="9" handleClick={addToText} />
+          <Button symbol="/" color={buttonColor} handleClick={addToText} />
+        </div>
+        <div className="row">
+          <Button symbol="4" handleClick={addToText} />
+          <Button symbol="5" handleClick={addToText} />
+          <Button symbol="6" handleClick={addToText} />
+          <Button symbol="*" color={buttonColor} handleClick={addToText} />
+        </div>
+        <div className="row">
+          <Button symbol="1" handleClick={addToText} />
+          <Button symbol="2" handleClick={addToText} />
+          <Button symbol="3" handleClick={addToText} />
+          <Button symbol="+" color={buttonColor} handleClick={addToText} />
+        </div>
+        <div className="row">
+          <Button symbol="0" handleClick={addToText} />
+          <Button symbol=" . " handleClick={addToText} />
+          <Button symbol="=" handleClick={calculateResult} />
+          <Button symbol="- " color={buttonColor} handleClick={addToText} />
+        </div>
+        <Button symbol="Clear" color={buttonColor2} handleClick={resetInput} />
       </Wrapper>
-    </CalProvider>
+    </div>
   )
 }
-
-
 
 export default Calculator;
