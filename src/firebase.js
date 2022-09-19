@@ -7,9 +7,10 @@ import {
   getAuth,
   signInWithPopup,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
-  signInWithCustomToken
+  updateProfile
 } from "firebase/auth";
 
 import {
@@ -115,5 +116,5 @@ export {
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordReset,
-  logout,
+  logout
 };
