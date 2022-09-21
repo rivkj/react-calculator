@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
 
 import {
@@ -27,6 +26,7 @@ import {
 const firebaseConfig = {
   apiKey: "AIzaSyAEGfKD_W46qz-jCLaOADLuLXp_50M2-w0",
   authDomain: "v2calc.firebaseapp.com",
+  databaseURL: "https://v2calc.firebaseio.com",
   projectId: "v2calc",
   storageBucket: "v2calc.appspot.com",
   messagingSenderId: "454016571644",
@@ -37,7 +37,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const fs_db = getFirestore(app); //firestore db
-const db = getFirestore(app);
+const db = getDatabase(app);
 
 const googleProvider = new GoogleAuthProvider();
 

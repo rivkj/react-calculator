@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Wrapper.css";
+import "../css/Wrapper.css";
 
 //button component as a functional component
 const Button = ({ symbol, color, handleClick }) => {
