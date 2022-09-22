@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Calculator from "./components/calculator";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
