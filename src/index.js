@@ -5,13 +5,14 @@ import reportWebVitals from './reportWebVitals';
 
 import './css/Wrapper.css';
 
-import Calculator from './components/calculator';
+// import Calculator from './components/calculator';
+import App from "./App";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <App />
   </React.StrictMode>
 );
 
