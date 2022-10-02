@@ -34,3 +34,11 @@ Features: Ability to add, subtract, multiply, divide simple numbers using Math.j
 
 
 To-do: Update app to pass complex number calculations and allow users to input decimal numbers without having to put a zero beforehand.
+
+V2 Calculator:
+- added Sign in with email/password and Google Login
+- added Logout
+- fixed home page and added Router functionality
+
+To-do: Adjust logout button to all pages
+- fix navbar so that current page grays out on navbar
