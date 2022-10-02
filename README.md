@@ -39,6 +39,8 @@ V2 Calculator:
 - added Sign in with email/password and Google Login
 - added Logout
 - fixed home page and added Router functionality
+![signup-page](https://user-images.githubusercontent.com/104873021/193435164-ced81bd1-95f7-4fdd-b211-d615d08245f6.png)
+![signin-page](https://user-images.githubusercontent.com/104873021/193435166-33bb92fa-ca25-4dfe-a665-3e37d951de84.png)
 
 To-do: Adjust logout button to all pages
 - fix navbar so that current page grays out on navbar
