@@ -6,6 +6,7 @@ import * as Math from "mathjs";
 import Button from "./Button";
 import OutputScreen from "./outputScreen";
 import Wrapper from "./Wrapper";
+import Nav from "./Nav";
 
 const Calculator = () => {
 
@@ -13,7 +14,7 @@ const Calculator = () => {
   const [result, setResult] = useState("");
 
   const addToText =(val) => {
-    setText((text) => [...text, val + " "])
+    setText((text) => [...text, val])
   };
 
   const resetInput = () => {
@@ -33,6 +34,7 @@ const Calculator = () => {
   return (
     <div className="Calc">
       <h1>My Calculator App</h1>
+      <Nav />
       <Wrapper>
         <OutputScreen text={text} result={result} />
         <div className="row">

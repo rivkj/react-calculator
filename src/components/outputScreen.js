@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Wrapper.css";
+import "../css/Wrapper.css";
 
 //functional component
 //holds input and output rows

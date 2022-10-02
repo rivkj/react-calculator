@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=VT323&display=swap');
+
 body {
   align-items: center;
-  background-color: #2b2929;
+  background-color: #ece8e8;
   display: flex;
-  height: 100vh;
+  font-family: 'Poppins';
   justify-content: center;
+  margin: 20px;
+}
+
+h1 {
+  margin: 5px 0;
 }
 
 .wrapper {
@@ -12,12 +19,7 @@ body {
   border-radius: 1rem; 
   box-shadow: 0px 9px 15px -3px #0000001a;
   padding: 1rem;
-  width: 18rem;
-}
-
-h1 {
-  color: #fff;
-  text-align: center;
+  width: 20rem;
 }
 
 /** Output screen styling **/
