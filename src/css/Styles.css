@@ -6,22 +6,20 @@
 
 .App {
   font-family: sans-serif;
-  width: 100%;
-  min-height: 100vh;
 }
 
 .navbar {
   width: 100%;
   min-height: 10vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   background: #f076e8;
+  margin-bottom: 1rem;
 }
 
 .nav-links  {
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -30,5 +28,9 @@
 .nav-links>a{
   color: #000;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 10px;
+}
+
+.g-button {
+  margin-top: 1rem;
 }
